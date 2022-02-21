@@ -1,1 +1,199 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.card-pokemon {
+  display: inline-block;
+  width: 19rem;
+  padding: 0.5rem;
+  border-radius: 15px;  
+  margin: 10px;
+  background: #ddd;
+  text-align: left;
+  box-shadow: 0px 5px 20px -10px #111111;
+  position: relative;  
+  transition: 0.4s;
+
+  .tag {
+    padding: 0.3rem 0.7rem;
+    font-size: 14px;
+    border-radius: 10px
+  }
+
+  &__caption {
+    background-color: rgba(#ffffff, 0.65);
+    padding: 1em;
+    position: relative;
+    border-radius: 0 0 3px 3px;
+  }
+  &__image-container {
+    background-color: rgba(#000000, 0.7);
+    padding: 1em 1em 0;
+    border-radius: 3px 3px 0 0;
+  }
+  &__image {
+    max-height: 150px;
+  }
+  
+  &__type {
+    position: absolute;
+    top: 0;
+    right: 1em;
+    transform: translateY(-50%);
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+    letter-spacing: 0.1em;
+    padding: 0.25em;
+    line-height: 1;
+    border-radius: 2px;
+    background: #bbbbbb;
+  }
+
+  &__label {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 3px;
+  }
+  
+  
+  &__name {
+    font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+    text-align: center;
+    font-size: 1.5em;    
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  
+  &__stats {
+    margin: 1em 0;
+    th {
+      font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+      text-align: right;
+      font-weight: 300;
+    }
+    width: 100%;
+    
+    th, td {
+      width: 50%;
+      padding: 0.25em 0.5em 0;
+    }
+    
+  }
+  
+  &__abilities {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__ability {
+    margin-top: 1em;
+    flex: 1 0;
+  }
+    
+  &--normal {
+    background: #c08a53;
+    &--type {
+      background-color: #c08a53;
+      color: white;
+      box-shadow: #000000;
+    }
+  }
+  &--water {
+    background: #1CB5E0;
+    &--type {
+      background-color: #1CB5E0;
+      color: white;
+      box-shadow: #000000;
+    }  
+  }
+  &--electric {
+    background: rgba(255,222,0,1); 
+    &--type {
+      background-color: rgba(255,222,0,1); ;
+      color: white;
+      box-shadow: #000000;
+    }
+  }
+  &--fire {
+    background: rgba(199,24,0,1); 
+    &--type {
+      background-color: rgba(199,24,0,1); 
+      color: white;
+      box-shadow: #000000;
+    }
+  }
+  
+  &--psychic {
+    background: rgba(255,167,249,1);
+    &--type {
+      background-color: rgba(255,167,249,1);
+      color: white;
+      box-shadow: #000000;
+    }
+  }
+  
+  &--dark {
+    background: rgba(25,25,25,1);
+    &--type {
+      background-color: rgba(25,25,25,1);
+      color: white;
+      box-shadow: #000000;
+    }
+  }
+  &--grass {
+    background: rgba(196,218,61,1);
+    &--type {
+      background-color: rgba(196,218,61,1);
+      color: #000000;
+      box-shadow: #000000;
+    }
+  }
+  
+  &--ice {
+    background: rgba(202,234,246,1);
+    &--type {
+      background-color: rgba(202,234,246,1);
+      color: #000000;
+      box-shadow: #000000;
+    }
+  }
+  
+  &--fairy {
+    background: rgba(255,230,240,1);
+    &--type {
+      background-color: rgba(255,230,240,1);
+      color: 000000;
+      box-shadow: #000000;
+    }
+  }
+
+  &--poison {
+    background: rgb(160, 8, 142);
+    &--type {
+      background-color: rgb(160, 8, 142);
+      color: white;
+      box-shadow: #000000;
+    }
+  }
+
+  &--flying {
+    background: rgb(200, 240, 252);
+    &--type {
+      background-color: rgb(200, 240, 252);
+      color: #000000;
+      box-shadow: #000000;
+    }
+  }
+
+  &:hover {
+    z-index: 5;
+    box-shadow: 0px 13px 30px -15px #000000;
+    transform:translateY(-10px);
+  }
+  
+}
+

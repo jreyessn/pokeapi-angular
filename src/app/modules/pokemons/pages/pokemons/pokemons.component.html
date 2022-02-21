@@ -1,0 +1,22 @@
+<div class="flex justify-between">
+    <h2 class="text-xl font-semibold">{{ title }}</h2>
+    
+    <app-control-navigation 
+        [total]="total" 
+        (change)="changePage($event)"></app-control-navigation>
+</div>
+
+
+<div class="mt-6 flex flex-wrap justify-center" *ngIf="pokemonResources$ | async as pokemonsResources; else loading">
+    <app-pokemon-card
+        *ngFor="let pokemonResource of pokemonsResources"
+        [pokemonResource]="pokemonResource"
+    ></app-pokemon-card>
+</div>
+<ng-template #loading>
+    <div class="h-96">
+        <div style="border-top-color:transparent"
+        class="mx-auto w-16 h-16 border-4 border-blue-400 border-double rounded-full animate-spin"></div>
+    </div>
+</ng-template>
+

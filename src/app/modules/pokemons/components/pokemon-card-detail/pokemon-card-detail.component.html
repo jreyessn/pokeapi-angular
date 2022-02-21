@@ -1,0 +1,53 @@
+<div [class]="'card-pokemon cursor-pointer card-pokemon--' + typeFirst" *ngIf="pokemon" [routerLink]="['/pokemons/', pokemon.id]">
+    <div class="card-pokemon__image-container flex justify-evenly">
+      <div>
+        <img [src]="profilePic" [alt]="pokemon.name" class="card-pokemon__image">   
+      </div>
+      <div class="sprite-pics">
+        <img [src]="pokemon.sprites.front_default" alt="front">
+        <img [src]="pokemon.sprites.front_shiny" alt="front">
+        <img [src]="pokemon.sprites.back_default" alt="back">
+        <img [src]="pokemon.sprites.back_shiny" alt="back">
+      </div>
+    </div>
+    
+    <div class="card-pokemon__caption">
+      <div class="mb-2 text-center">
+        <span *ngFor="let pType of pokemon.types" [class]="'tag uppercase mr-1 card-pokemon--' + pType.type.name + '--type'">
+          {{ pType.type.name }}
+        </span>
+      </div>
+      <h1 class="card-pokemon__name">
+        {{ pokemon.name }}
+      </h1>
+      
+      <div class="card-pokemon-content flex">
+        
+        <table class="card-pokemon__stats">
+            <tbody>
+            <tr *ngFor="let stats of pokemon.stats">
+              <th>{{ stats.stat.name }}</th>
+              <td>{{ stats.base_stat }}</td>
+            </tr>
+          </tbody>
+        </table>
+  
+        <p class="m-1-25 w-96">
+          {{ pokemon.description }}
+        </p>
+
+      </div>
+      
+      <div class="card-pokemon__abilities">
+        <h4 class="card-pokemon__ability text-center">
+          <span class="card-pokemon__label">Habilidad</span>
+          {{ ability }}
+        </h4>
+        <h4 class="card-pokemon__ability text-center">
+          <span class="card-pokemon__label">Habilidad oculta</span>
+          {{ abilityHidden }}
+        </h4>
+      </div>
+    </div>
+</div>
+  

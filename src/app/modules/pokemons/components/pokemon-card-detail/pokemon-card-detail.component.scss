@@ -1,0 +1,13 @@
+.card-pokemon {
+    width: 33rem;
+
+    .m-1-25 {
+        margin: 1.25rem;
+    }
+
+    .sprite-pics {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}

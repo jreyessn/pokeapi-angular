@@ -1,0 +1,28 @@
+<div [class]="'card-pokemon cursor-pointer card-pokemon--' + typeFirst" *ngIf="pokemon" [routerLink]="['/pokemons/', pokemon.id]">
+    <div class="card-pokemon__image-container flex justify-center">
+      <img [src]="profilePic" [alt]="pokemon.name" class="card-pokemon__image">   
+    </div>
+    
+    <div class="card-pokemon__caption">
+      <div class="mb-2 text-center">
+        <span *ngFor="let pType of pokemon.types" [class]="'tag uppercase mr-1 card-pokemon--' + pType.type.name + '--type'">
+          {{ pType.type.name }}
+        </span>
+      </div>
+      <h1 class="card-pokemon__name">
+        {{ pokemon.name }}
+      </h1>
+      
+      <div class="card-pokemon__abilities">
+        <h4 class="card-pokemon__ability">
+          <span class="card-pokemon__label">Habilidad</span>
+          {{ ability }}
+        </h4>
+        <h4 class="card-pokemon__ability">
+          <span class="card-pokemon__label">Habilidad oculta</span>
+          {{ abilityHidden }}
+        </h4>
+      </div>
+    </div>
+</div>
+  

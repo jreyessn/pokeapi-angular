@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "49a4230b-4287-4a3b-aaeb-035ac600bd98"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pokeapi": {
+    "pokeapi-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pokeapi",
+            "outputPath": "dist/pokeapi-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pokeapi:build:production"
+              "browserTarget": "pokeapi-angular:build:production"
             },
             "development": {
-              "browserTarget": "pokeapi:build:development"
+              "browserTarget": "pokeapi-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pokeapi:build"
+            "browserTarget": "pokeapi-angular:build"
           }
         },
         "test": {
@@ -107,5 +110,5 @@
       }
     }
   },
-  "defaultProject": "pokeapi"
+  "defaultProject": "pokeapi-angular"
 }
