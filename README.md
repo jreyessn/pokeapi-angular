@@ -13,5 +13,5 @@ Simple practicing to list resources of api pokemon
 
 ## Credentials
 
-User: entrenador@gmail.com
-Pass: 1234
+- User: entrenador@gmail.com
+- Pass: 1234
